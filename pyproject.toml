@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "head-factory"
+version = "0.1.0"
+description = "Controlled OpenAI-powered PS2-style portrait asset pipeline"
+requires-python = ">=3.11"
+dependencies = [
+  "openai>=1.68.0",
+  "Pillow>=11.0.0",
+  "python-dotenv>=1.0.1",
+]
+
+[project.scripts]
+head-factory = "head_factory.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["head_factory*"]
